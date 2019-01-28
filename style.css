@@ -1,0 +1,604 @@
+/*
+Theme name: Estime
+Description: szablon estime.poznan.pl
+Version: 0.1
+Author: Krzysztof Hankiewicz @kjhank
+Author URI: http://kjhank.pl
+*/
+
+/* * { outline: solid 0.25rem red; } */
+
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+::-moz-selection {
+  background-color: #d4016c;
+  color: #fff;
+  text-shadow: none;
+}
+
+::selection {
+  background-color: #d4016c;
+  color: #fff;
+  text-shadow: none;
+}
+
+.clearfix::after {
+	content: " " !important;
+	display: table;
+	clear: both;
+}
+
+video, img {max-width: 100%}
+
+strong {font-weight: 700}
+
+body {
+  font-weight: 100;
+  font-family: 'Open Sans', sans-serif;
+  line-height: 1.5;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Montserrat', serif;
+  text-transform: uppercase;
+}
+
+h1 {
+  font-size: 4rem;
+  font-weight: 100;
+  padding: 1.5vw 0;
+}
+
+h2 {
+  font-size: xx-large;
+  font-weight: 400;
+  text-align: center;
+  padding: 1.5vw 0;
+}
+
+h3 {
+  font-size: x-large;
+  font-weight: 500;
+  text-align: center;
+}
+
+h4 {
+  font-size: large;
+  font-weight: 500;
+  text-align: center;
+}
+
+h5 {
+  font-size: x-large;
+  font-weight: 100;
+  text-align: center;
+}
+
+a {
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.indent {
+  text-indent: 3rem;
+}
+
+/* colors */
+
+.slider-content .slider-item div {
+  background-color: rgba(255, 255, 255, .7);
+}
+
+.slider-content .slider-item:hover div {
+  background-color: rgba(163, 197, 235, .9);
+}
+
+body, a:not(.slider-item):hover, .about-us a:visited, a:hover>.read-more, .single-about-us, .about-us-pricing, .about-us-header {
+  color: #3a405a;
+}
+
+a, h2, h3, h4, .main-footer a, .about-us-pricing>footer, .about-us-header>footer .main-content .page-contact .contact-form .send-button:hover, .read-more {
+  color: #d4016c;
+  transition: color .2s ease-in;
+}
+
+.icon, .company-info li:hover>.icon {
+  fill: #d4016c;
+  transition: fill .2s ease-in;
+}
+
+.icon-spacer, .icon:hover, a:hover>.icon {
+  fill: #3a405a;
+}
+ .main-content .page-contact .contact-form .send-button {
+  background-color: #d4016c;
+}
+
+.company-info .icon:not(.icon-spacer) {
+  fill: #3a405a;
+  transition: fill .2s ease-in;
+}
+
+.main-header {
+  background: rgba(255, 255, 255, .9);
+}
+
+h1, .main-content .page-contact .contact-form .send-button {
+  color: #fff;
+}
+
+.single-about-us:hover>footer, .main-content .page-contact .contact-form .send-button:hover {
+  background-color: #fff;
+}
+
+.main-footer {
+  background: #e5e5e5;
+}
+
+/* layout */
+
+.main-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  max-width: 100%;
+  box-shadow: 0 .05rem .1rem rgba(0, 0, 0, .5);
+  padding: 0 15vw;
+  z-index: 23;
+}
+
+.home-url {
+  width: 12vw;
+  display: block;
+}
+
+.header-logo {
+  width: 12vw;
+  height: auto;
+  display: block;
+  padding: 1vw 0;
+}
+
+.top-navigation {
+  display: block;
+  font-family: "Montserrat", serif;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 15vw;
+}
+
+.top-navigation-item {
+  display: inline-block;
+  padding: 0 1vw;
+  border-right: .01rem solid #3a045a;
+}
+
+.top-navigation-item:last-child {
+  border: none;
+}
+
+.top-navigation-item .icon {
+  width: 1.5vw;
+  height: auto;
+  vertical-align: text-bottom;
+}
+
+.main-content {
+  margin-top: 10vh;
+}
+
+.soliloquy-container {
+  width: 100%;
+}
+
+.main-section {
+  width: 100vw;
+  max-width: 100%;
+  text-align: left;
+}
+
+.main-section div>p {
+  text-align: left;
+}
+
+.main-section>header, .main-section>footer, .about-us-header, .about-us-pricing, .page-content {
+  padding: 0 15vw;
+}
+
+.main-section .icon-spacer {
+  width: 5vw;
+  height: auto;
+  margin: auto;
+  display: block;
+}
+
+.slider-content .slider-item {
+  width: 25%;
+  display: block;
+  height: 25vw;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+.slider-content .slider-item div {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  transition: all .2s ease-in;
+  height: 45%;
+}
+
+.slider-content .slider-item:hover div {
+  height: 100%;
+}
+
+.slider-content .slider-item div>h5 {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100%;
+  transition: all .2s ease-in;
+}
+
+.about-us-header, .about-us-pricing {
+  margin: auto;
+  display: block;
+  position: relative;
+  padding-bottom: 4rem;
+}
+
+.about-us-wrapper {
+  padding: 0 15vw;
+  margin: 3rem 0 0;
+}
+
+.single-about-us {
+  width: 32vw;
+  float: left;
+  display: block;
+  position: relative;
+}
+
+.single-about-us>h2 {
+  padding: 0;
+  font-size: x-large;
+}
+
+.single-about-us {
+  font-size: small;
+  text-align: left;
+  line-height: 1.4;
+}
+
+.single-about-us:nth-child(odd) {
+  padding: 1.5vw 1.5vw 4vw;
+}
+
+.single-about-us:nth-child(even) {
+  padding: 1.5vw 1.5vw 4vw;
+  float: right;
+}
+
+.single-about-us:first-of-type, .single-about-us:nth-of-type(3) {
+  /* border: 1px solid #d4016c; */
+}
+
+.single-about-us p {
+  margin-top: 1.5vw;
+}
+
+.read-more {
+  padding: .5vw 0;
+  text-align: center;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  transition: color .2s ease-in, background-color .2s ease-in;
+}
+
+.main-footer {
+  width: 100vw;
+  max-width: 100%;
+  /* padding: 5vh 0; */
+  /* display: flex;
+  justify-content: center; */
+}
+
+.main-footer>.author {
+  width: 100%;
+  text-align: center;
+  font-size: xx-small;
+  color: #fff;
+  background: #000;
+}
+
+.main-footer>.author>a {
+  color: #ef9a3b;
+}
+
+.main-footer>div {
+  width: 100%;
+}
+
+.main-footer>nav {
+  width: 100vw;
+  max-width: 100%;
+}
+
+.main-footer .icon-spacer {
+  width: 5vw;
+  height: auto;
+  display: block;
+  margin: auto;
+}
+
+.main-footer .bottom-map {
+  display: block;
+  margin: auto;
+  width: 100%;
+}
+
+.company-info .icon:not(.icon-spacer) {
+  width: 1vw;
+  height: auto;
+  display: block;
+  float: left;
+  margin-bottom: 3vh;
+  margin-right: .5vw;
+}
+
+.main-footer>.company-info>ul {
+  display: block;
+  width: 100%;
+  margin: auto;
+  text-align: center;
+}
+
+.main-footer ul>li {
+  /* margin: 5vh auto; */
+  display: inline-block;
+  /* vertical-align: middle; */
+}
+
+.footer-misc .icon:not(.icon-spacer) {
+  width: 5vw;
+  height: auto;
+  margin: auto 3vh;
+}
+
+.footer-misc>section {
+  margin: auto;
+  text-align: center;
+}
+
+/* pages */
+
+.page-section p {
+  margin: 1rem auto;
+}
+
+.page-section>header {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  /* background-image: url('https://estime.kjhank.pl/wp-content/uploads/2018/10/slider-2.jpg'); */
+  background-image: radial-gradient(farthest-corner at 25vw 5vw, #d4016c 10%, #fff 70%);
+  padding: 7rem 15vw;
+}
+
+.contact-data p {
+  margin: 0;
+}
+
+.contact-map {
+  width: 100vw;
+  max-width: 100%;
+}
+
+.opening-hours {
+  width: 100%;
+  text-align: left;
+}
+
+.opening-hours th {
+  padding: .3rem 0;
+}
+
+.contact-data, .contact-opening-hours {
+  float: left;
+  width: 50%;
+}
+
+.main-content .page-contact .contact-form .contact-form-name {
+  float: left;
+  width: 48%;
+  clear: none;
+}
+
+.main-content .page-contact .contact-form .contact-form-email {
+  float: right;
+  width: 48%;
+  clear: none;
+}
+
+.main-content .page-contact .contact-form .contact-agreement ul label {
+  font-size: x-small;
+  text-align: justify;
+}
+
+.main-content .page-contact .contact-form .send-button {
+  padding: 1rem 3rem;
+  float: right;
+  transition: color .2s ease-in, background-color .2s ease-in;
+}
+
+.page-content {
+  margin: 5vw auto;
+}
+
+.team>.team-member {
+  margin-bottom: 2.5vw;
+  padding-bottom: 2.5vw;
+  display: block;
+  border-bottom: .1rem solid #aec5eb;
+}
+
+.team>.team-member>header {
+  text-align: center;
+  margin-bottom: 1rem;
+  font-size: smaller;
+}
+
+.team>.team-member>header>h2 {
+  padding: 0;
+}
+
+.page-content>.team>.team-member>img {
+  display: block;
+  width: 25%;
+}
+
+.page-content>.team>.team-member>div {
+  width: 75%;
+  line-height: 1.5;
+  padding-left: 1rem;
+}
+
+.page-content>.team>.team-member>img, .page-content>.team>.team-member>div {
+  float: left;
+}
+
+.team-member-data>p {
+  margin: auto;
+}
+
+.page-content>.team>.team-member>.team-member-data>.team-member-diplomas {
+  margin-top: 2.5rem;
+}
+
+.page-content>.treatments {
+  text-align: center;
+}
+
+.page-content>.treatments>.single-treatment {
+  display: inline-block;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 20vw;
+  height: 23vw;
+  margin: 1vw;
+  position: relative;
+}
+
+.page-content>.treatments>.single-treatment>.treatment-name {
+  display: block;
+  position: absolute;
+  /* top: 50%;
+  transform: translateY(-50%); */
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  transition: all .2s ease-in;
+  background: #fff;
+  padding: .5rem;
+}
+
+.page-content>.treatments>.single-treatment:hover>.treatment-name {
+  transform: scale(1.2);
+}
+
+.page-content .pricing-table {
+  margin: 2rem 0;
+  width: 100%;
+}
+
+.page-content .pricing-table td {
+  padding: .5rem;
+  border-bottom: .1rem solid #d4016c;
+  font-size: larger;
+}
+
+.pricing-table th {
+  font-variant: small-caps;
+  padding: .5rem;
+  color: #d4016c;
+  font-size: larger;
+  font-weight: 400;
+}
+
+.page-content .pricing-table tr>td:last-of-type, .pricing-table th:last-of-type {
+  text-align: right;
+  vertical-align: middle;
+}
+
+.pricing-table th:first-of-type {
+  text-align: left;
+}
+
+.page-content .pricing-table tr:last-of-type>td {
+  border: none;
+}
+
+.page-content .indications-contraindications {
+  margin-top: 2rem;
+  padding-bottom: 2rem;
+  /* border-bottom: .1rem solid #d4016c; */
+}
+
+.page-content .indications-contraindications>div {
+  width: 35vw;
+  float: left;
+}
+
+.indications-contraindications>.indications>ul {
+  padding-right: 2vw;
+}
+
+.indications-contraindications>.contraindications>ul {
+  border-left: .1rem solid #d4016c;
+  padding-left: 2vw;
+}
+
+.indications-contraindications li {
+  list-style-type: none;
+  margin: .5rem 1rem;
+}
+
+.indications-contraindications li::before {
+  content: '·';
+  font-weight: 900;
+  margin-right: .5rem;
+}
+
+.treatment-nav>a {
+  display: block;
+  width: 20vw;
+  float: left;
+  margin: auto 7.5vw;
+  background-color: #d4016c;
+  color: #fff;
+  font-size: xx-large;
+  font-weight: 100;
+  text-align: center;
+  text-transform: uppercase;
+  padding: 1rem 0;
+  transition: all .2s ease-in;
+  border: .1rem solid #d4016c;
+}
+
+.treatment-nav>a:hover {
+  color: #d4016c;
+  background-color: #fff;
+  border: .1rem solid #d4016c;
+}
